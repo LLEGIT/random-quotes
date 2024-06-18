@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+SK:wght@100..400&display=swap" rel="stylesheet">
+  <title>Random quotes</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-[url('./assets/bg-desktop.jpg')] playwrite-font-text p-5 space-y-10">
+  <section id="header" class="flex justify-center align-center lg:mt-10">
+    <h1 class="playwrite-font-title text-lg leading-8 lg:text-xl">Want to impress your friends and family at a dinner
+      party? Find the perfect
+      quote.
+    </h1>
+  </section>
+  <section id="quote" class="space-y-5">
+    <p id="quote-paragraph">Getting the best quote...</p>
+    <p id="quote-author-label"></p>
+    <button class="border border-black p-3" id="refresh-quote-btn">Refresh</button>
+  </section>
+
+  <footer class="absolute bottom-5">
+    <p>Made with love by @LLEGIT using <a class="underline"
+        href="https://github.com/lukePeavey/quotable?tab=readme-ov-file#get-random-quote">this open project api</a></p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
