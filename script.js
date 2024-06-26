@@ -14,7 +14,7 @@ async function handleRefreshQuote(button) {
   const newQuote = await getRandomQuote();
   refreshQuote(newQuote);
 
-  const stages = [20, 40, 60, 80, 100];
+  const stages = [20, 40, 60, 80, 99, 100];
   for (const stage of stages) {
     await updateButtonBackground(button, stage);
   }
@@ -24,17 +24,16 @@ async function handleRefreshQuote(button) {
 
 function disableButton(button) {
   button.disabled = true;
-  button.classList.remove('text-white');
+  button.classList.add('text-white');
 }
 
 function enableButton(button) {
   button.disabled = false;
-  button.classList.remove('background-loading-100-percent');
-  button.classList.add('text-white');
+  button.classList.remove('text-white');
 }
 
 async function updateButtonBackground(button, percentage) {
-  await delay(1000);
+  await delay(400);
   button.className = button.className.replace(/background-loading-\d+-percent/g, '');
   button.classList.add('background-loading', `background-loading-${percentage}-percent`);
 }
