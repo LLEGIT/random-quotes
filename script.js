@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
+
+
   const firstQuote = await getRandomQuote();
   refreshQuote(firstQuote);
 
@@ -14,7 +16,7 @@ async function handleRefreshQuote(button) {
   const newQuote = await getRandomQuote();
   refreshQuote(newQuote);
 
-  const stages = [20, 40, 60, 80, 99, 100];
+  const stages = [1, 2, 3, 4];
   for (const stage of stages) {
     await updateButtonBackground(button, stage);
   }
@@ -24,18 +26,34 @@ async function handleRefreshQuote(button) {
 
 function disableButton(button) {
   button.disabled = true;
-  button.classList.add('text-white');
+  button.classList.remove('bg-white');
 }
 
 function enableButton(button) {
   button.disabled = false;
-  button.classList.remove('text-white');
 }
 
-async function updateButtonBackground(button, percentage) {
-  await delay(400);
-  button.className = button.className.replace(/background-loading-\d+-percent/g, '');
-  button.classList.add('background-loading', `background-loading-${percentage}-percent`);
+async function updateButtonBackground(button, stage) {
+  await delay(1000);
+  switch (stage) {
+    case 1:
+      button.classList.add('bg-gray-200');
+      break;
+    case 2:
+      button.classList.remove('bg-gray-200');
+      button.classList.add('bg-gray-500');
+      break;
+    case 3:
+      button.classList.add('bg-gray-200');
+      button.classList.remove('bg-gray-500');
+      break;
+    default:
+      button.classList.remove('bg-gray-200');
+      button.classList.add('bg-white');
+      break;
+
+  }
+
 }
 
 function delay(ms) {

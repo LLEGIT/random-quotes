@@ -11,23 +11,3 @@
   font-weight: 100;
   font-style: normal;
 }
-
-.background-loading-20-percent {
-  background: linear-gradient(90deg, #000000 20%, #ffffff 20%);
-}
-
-.background-loading-40-percent {
-  background: linear-gradient(90deg, #000000 40%, #ffffff 40%);
-}
-
-.background-loading-60-percent {
-  background: linear-gradient(90deg, #000000 60%, #ffffff 60%);
-}
-
-.background-loading-80-percent {
-  background: linear-gradient(90deg, #000000 80%, #ffffff 80%);
-}
-
-.background-loading-99-percent {
-  background: linear-gradient(90deg, #000000 99%, #ffffff 99%);
-}

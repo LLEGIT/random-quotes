@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="./assets/quote_icon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+SK:wght@100..400&display=swap" rel="stylesheet">
@@ -22,10 +23,9 @@
   <section id="quote" class="space-y-5 lg:text-center lg:mt-48">
     <p id="quote-paragraph" class="lg:text-3xl">Getting the best quote...</p>
     <p id="quote-author-label" class="lg:text-xl"></p>
-    <button
-      class="rounded-lg p-3 bg-white transition-background transform hover:opacity-80 transition-background duration-400"
-      id="refresh-quote-btn">
+    <button class="bg-white rounded-lg p-3 transition-colors duration-1000" id="refresh-quote-btn">
       Get another quote</button>
+    <p id="remaining-quotes">Remaining quotes : 5</p>
   </section>
 
   <footer class="absolute bottom-5">
